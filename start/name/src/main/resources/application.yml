@@ -1,2 +1,6 @@
-server.port: 7070
-name: Ryan
+#server.port: 7070\
+#name: Ryan
+
+spring:
+  application:
+    name: name

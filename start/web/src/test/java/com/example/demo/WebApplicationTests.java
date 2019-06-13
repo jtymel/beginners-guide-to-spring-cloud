@@ -33,10 +33,13 @@ public class WebApplicationTests {
 	@MockBean
 	RestTemplate restTemplate;
 
+	@MockBean
+	NameService.NameFeignClient nameFeignClient;
+
 	@Before
 	public void setup() {
-		doReturn("Ryan").when(restTemplate).getForObject(eq("http://localhost:7070"), eq(String.class));
-		doReturn("Hello").when(restTemplate).getForObject(eq("http://localhost:9090/en"), eq(String.class));
+		doReturn("Ryan").when(nameFeignClient).getName();
+		doReturn("Hello").when(restTemplate).getForObject(eq("http://greeting/en"), eq(String.class));
 	}
 
 	@Test

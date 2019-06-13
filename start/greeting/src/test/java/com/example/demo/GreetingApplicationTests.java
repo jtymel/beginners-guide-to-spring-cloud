@@ -27,7 +27,7 @@ public class GreetingApplicationTests {
 		assertEquals("Hallo", deGreeting);
 		assertEquals("Hello", enGreeting);
 		assertEquals("Hola", esGreeting);
-		assertEquals("Hello", defaultGreeting);
+		assertEquals("Yo", defaultGreeting);
 
 	}
 
